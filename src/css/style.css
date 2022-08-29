@@ -1,0 +1,56 @@
+.my-container{
+   background-color: #242424;
+   height: 800px;
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%, -50%);
+}
+
+.box{
+   box-shadow:  4px 12px 24px rgba(0, 0, 0, 0.25);
+   border-radius: 20px;
+   background-color: #242424;
+   height: 40%;
+   margin: 10%;
+}
+
+.l-box{
+   width: 80%;
+   color: white;
+   padding: 20px;
+}
+   
+.title{
+   line-height: 80px;
+}
+
+.barred{
+   text-decoration: line-through;
+}
+.b-space{
+   position: absolute;
+   top: 65%;
+   right: 50%;
+   transform: translate(50%, -50%);
+}
+.my-btn{
+   background-color: #716FB2 !important;
+   color: black !important;
+   border-radius: 40px !important;
+   border: none !important;
+   box-shadow:  4px 12px 24px rgba(0, 0, 0, 0.25) !important;
+   height: 50px;
+   
+}
+   
+
+
+   
+
+
+   
+   
+   
+
+      

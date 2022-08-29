@@ -19,10 +19,11 @@ class App extends Component {
     <>
     <Box></Box>
 
-
     </>
   );
  }
 }
+    
+
 
 export default App;
