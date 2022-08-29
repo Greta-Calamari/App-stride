@@ -21,7 +21,7 @@ function Box(){
               <div> 
                <YourSvg style={{width:'30px'}}></YourSvg>
                <Off style={{width:'30px'}} className="mx-4"></Off>
-               <span style={{color:'white'}}>bla</span>
+               <span style={{color:'white'}}>inserire testo</span>
               </div>
 
               <div>
