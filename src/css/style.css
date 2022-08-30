@@ -1,11 +1,11 @@
 .my-container{
    background-color: #242424;
-   height: 800px;
    position: absolute;
    top: 50%;
    right: 50%;
    transform: translate(50%, -50%);
 }
+ 
 
 .box{
    box-shadow:  4px 12px 24px rgba(0, 0, 0, 0.25);
@@ -30,7 +30,7 @@
 }
 .b-space{
    position: absolute;
-   top: 65%;
+   top: 90%;
    right: 50%;
    transform: translate(50%, -50%);
 }
@@ -43,13 +43,47 @@
    height: 50px;
    
 }
+.my-btn2{
+   background-color: #716FB2 !important;
+   color: black !important;
+   border-radius: 40px !important;
+   border: none !important;
+   box-shadow:  4px 12px 24px rgba(0, 0, 0, 0.25) !important;
+   width: 90px;
    
-
-
    
+}  
 
-
+.distance{
+   line-height: 170px;
+  transform: translate(35%,30%);
+}
+.distance-list{
+   transform: translate(10%,90%);
    
+}
+
+.form-square{
+   margin: 0 auto;
+   width: 300px;
+   border-radius: 30px;
+   background-color: #242424;
+   
+}
+
+/* pop up */
+.popup-content {
+   margin: auto;
+   background: none !important;
+   width: 50%;
+   padding: 5px;
+   border: none !important;
+   
+}
+
+.none{
+   display: none;
+}
    
    
 
