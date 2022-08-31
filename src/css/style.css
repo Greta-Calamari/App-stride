@@ -22,12 +22,18 @@
    padding: 20px;
 }
 
+.list-item {
+   cursor: pointer;
+   user-select: none;
+}
+
 /* STILIZZAZIONI DELLE SCRITTE */
 .title{
    line-height: 80px;
 }
 
-.barred{
+.strikethrough,
+.barred {
    text-decoration: line-through;
 }
 .b-space{
