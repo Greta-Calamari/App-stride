@@ -1,3 +1,4 @@
+/* CONTAINER ESTERNO */
 .my-container{
    background-color: #242424;
    position: absolute;
@@ -6,7 +7,7 @@
    transform: translate(50%, -50%);
 }
  
-
+/* BOX PIU PICCOLO */
 .box{
    box-shadow:  4px 12px 24px rgba(0, 0, 0, 0.25);
    border-radius: 20px;
@@ -20,7 +21,8 @@
    color: white;
    padding: 20px;
 }
-   
+
+/* STILIZZAZIONI DELLE SCRITTE */
 .title{
    line-height: 80px;
 }
@@ -34,6 +36,8 @@
    right: 50%;
    transform: translate(50%, -50%);
 }
+
+/* STILIZZAZIONE DEI BOTTONI */
 .my-btn{
    background-color: #716FB2 !important;
    color: black !important;
@@ -50,9 +54,9 @@
    border: none !important;
    box-shadow:  4px 12px 24px rgba(0, 0, 0, 0.25) !important;
    width: 90px;
-   
-   
 }  
+   
+/* QUADRATO */
 
 .distance{
    line-height: 170px;
@@ -71,7 +75,7 @@
    
 }
 
-/* pop up */
+/* POP UP */
 .popup-content {
    margin: auto;
    background: none !important;
@@ -80,10 +84,10 @@
    border: none !important;
    
 }
-
 .none{
    display: none;
 }
+
    
    
 

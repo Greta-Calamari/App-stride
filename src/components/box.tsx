@@ -38,29 +38,25 @@ function Box(){
 
 
   function handleAdd(){
-    // @ts-ignore
-   document.getElementById('n').style.display = "block";
+    
+   (document.getElementById('n') as HTMLFormElement).style.display = "block";
    setButtonText('Inserisci voce')
   }
   
   function handleDelete(){
-    // @ts-ignore
-    document.getElementById('ab').style.display = "none";
-    // @ts-ignore
-    document.getElementById('s').style.display = "block";
+    
+    (document.getElementById('ab') as HTMLFormElement).style.display = "none";
+    (document.getElementById('s') as HTMLFormElement).style.display = "block";
 
   }
   function handleBin(){
-    // @ts-ignore
-    document.getElementById('n').style.display = "none";
+    (document.getElementById('n') as HTMLFormElement).style.display = "none";
     const oggetto1 = document.getElementById('s');
-    // @ts-ignore
-    oggetto1.classList.remove('animate__animated', 'animate__fadeInDown');
+    // l'oggetto potrebbe essere null typescript lo da errore . se io aggiungo l'operatore ?. mi consenbte di leggerne la proprieta' , cosi' type e' contento
+    oggetto1?.classList.remove('animate__animated', 'animate__fadeInDown');
     const oggetto2 = document.getElementById('c');
-    // @ts-ignore
-    oggetto1.classList.add('animate__animated', 'animate__fadeInDown');
-    // @ts-ignore
-    oggetto2.classList.add('animate__animated', 'animate__fadeInDown');
+    oggetto1?.classList.add('animate__animated', 'animate__fadeInDown');
+    oggetto2?.classList.add('animate__animated', 'animate__fadeInDown');
 
 
 
