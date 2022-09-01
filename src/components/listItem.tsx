@@ -17,10 +17,10 @@ export interface ListItemData {
 
 export default function ListItem({ isChecked, label, onChange, onDelete }: ListItemData) {
   return <div className='list-item'>
-    <IconBin onClick={onDelete} style={{ width: '30px' }}></IconBin>
+    <IconBin className="animate__animated animate__fadeInDown" onClick={onDelete} style={{ width: '30px' }}></IconBin>
     { isChecked ? 
-      <IconChecked onClick={onChange} style={{ width: '30px' }} className="mx-4 mb-1"></IconChecked>
-      : <IconUnchecked onClick={onChange} style={{ width: '30px' }} className="mx-4 mb-1"></IconUnchecked>
+      <IconChecked onClick={onChange} style={{ width: '30px' }} className="mx-4 mb-1 animate__animated animate__fadeInUp"></IconChecked>
+      : <IconUnchecked onClick={onChange} style={{ width: '30px' }} className="mx-4 mb-1 animate__animated animate__fadeInDown"></IconUnchecked>
     }
     <span 
       style={{ color: 'white' }}

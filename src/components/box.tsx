@@ -130,6 +130,8 @@ function Box() {
                         type="text"
                         id="name"
                         name="name"
+                        placeholder='Inserisci nuona voce'
+                        className='distance-list'
                     />
                   <div className='distance'>
                     <input                 

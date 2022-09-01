@@ -66,12 +66,17 @@
 
 .distance{
    line-height: 170px;
-  transform: translate(35%,30%);
+  transform: translate(55%,25%);
 }
 .distance-list{
-   transform: translate(10%,90%);
-   
+   color: white;
+   transform: translate(30%,90%);
+   border: none;
+   background-color:transparent;
+   outline: none;
 }
+
+   
 
 .form-square{
    margin: 0 auto;
