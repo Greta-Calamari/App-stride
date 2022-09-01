@@ -66,12 +66,13 @@ function Box() {
 
   const inputRef = useRef(null);
   
-  function handleClick(e: React.FormEvent<HTMLInputElement>) {
-    e.preventDefault();
+  function handleClick() {
     {/* @ts-ignore */}
     const value = inputRef.current.value;
     // qui pusho l'elemento nello state
     updateItems([...items, {label:value, isChecked:false}]);
+
+   
 }
 
     
@@ -131,13 +132,18 @@ function Box() {
                         name="name"
                     />
                   <div className='distance'>
-                    <input                 // removed from the button
-                        type="submit"
-                        value="save"
+                    <input                 
+                        type="button"
+                        value="Salva"
                         className='btn my-btn2'
-                        style={{ fontSize: '15px', fontWeight: '600' }}
-                        onClick={handleClick}
-                      />Salva
+                        style={{ fontSize: '15px', fontWeight: '600'}}
+                        onClick={() => {
+                          handleClick();
+                          close();
+                        }}
+                        
+                        
+                      />
                         
                   </div>
                   </label>
