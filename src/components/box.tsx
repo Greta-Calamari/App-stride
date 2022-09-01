@@ -13,8 +13,8 @@ import React from 'react';
 
 
 function Box() {
-  const initialText = 'Inserisci voce';
-  const [buttonText, setButtonText] = useState(initialText);
+
+
   const [ items, updateItems ] = useState([
     { label: 'Farsi assumere', isChecked: false },
     { label: 'Sviluppo dei componenti', isChecked: true },
@@ -66,15 +66,19 @@ function Box() {
 
   const inputRef = useRef(null);
   
-  function handleClick(e: { preventDefault: () => void; }) {
-    const addListItem = [...items];
+  function handleClick(e: React.FormEvent<HTMLInputElement>) {
+    e.preventDefault();
     {/* @ts-ignore */}
     const value = inputRef.current.value;
-    addListItem.push(value);
-    e.preventDefault();
-    updateItems(addListItem);
-    // console.log(inputRef.current.value);
+    // qui pusho l'elemento nello state
+    updateItems([...items, {label:value, isChecked:false}]);
 }
+
+    
+
+    
+
+
 
   return (
     <div className="container my-container">
@@ -118,37 +122,38 @@ function Box() {
           {/* @ts-ignore */}
           {close => (
             <div className='animate__animated animate__fadeInUp form-square'>
-              <form>
-      <label>
-        <input
-           ref={inputRef}
-           type="text"
-           id="name"
-           name="name"
-        />
-      </label>
-      <div className='distance'>
-            <button
-            className='btn my-btn2'
-            type="submit"
-            style={{ fontSize: '15px', fontWeight: '600' }}
-            onClick={handleClick}
-            
-
-            >
-                
-            Salva
-            </button>
-      </div>
-      
-    </form>
-              
-              
+                <form>
+                  <label>
+                    <input
+                        ref={inputRef}
+                        type="text"
+                        id="name"
+                        name="name"
+                    />
+                  <div className='distance'>
+                    <input                 // removed from the button
+                        type="submit"
+                        value="save"
+                        className='btn my-btn2'
+                        style={{ fontSize: '15px', fontWeight: '600' }}
+                        onClick={handleClick}
+                      />Salva
+                        
+                  </div>
+                  </label>
+                  
+                </form>
             </div>
           )}
         </Popup>
       </div>
     </div>
+              
+              
   );
 }
 export default Box;
+function preventDefault(arg0: number, preventDefault: any): React.MouseEventHandler<HTMLButtonElement> | undefined {
+  throw new Error('Function not implemented.');
+}
+
