@@ -1,14 +1,16 @@
 import '../css/style.css';
 import 'animate.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ReactComponent as YourSvg } from '../img/Bin.svg';
 import { ReactComponent as Add } from '../img/Adds.svg';
 import { ReactComponent as Off } from '../img/Checkbox_Off.svg';
 import { ReactComponent as On } from '../img/Checkbox_On.svg';
+// import Input from './input';
 import ListItem, { ListItemData } from './listItem';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import React from 'react';
+
 
 function Box() {
   const initialText = 'Inserisci voce';
@@ -21,14 +23,7 @@ function Box() {
     { label: 'Sviluppo CSS', isChecked: true },
   ] as ListItemData[]);
 
-  function handleClick() {
-    setButtonText('Seconda Voce');
-  }
 
-  function handleAdd() {
-    (document.getElementById('n') as HTMLFormElement).style.display = "block";
-    setButtonText('Inserisci voce')
-  }
 
   // function handleDelete() {
   //   (document.getElementById('ab') as HTMLFormElement).style.display = "none";
@@ -68,6 +63,18 @@ function Box() {
     updateItems(updatedItems);
     sortByChecked();
   }
+
+  const inputRef = useRef(null);
+  
+  function handleClick(e: { preventDefault: () => void; }) {
+    const addListItem = [...items];
+    {/* @ts-ignore */}
+    const value = inputRef.current.value;
+    addListItem.push(value);
+    e.preventDefault();
+    updateItems(addListItem);
+    // console.log(inputRef.current.value);
+}
 
   return (
     <div className="container my-container">
@@ -111,17 +118,32 @@ function Box() {
           {/* @ts-ignore */}
           {close => (
             <div className='animate__animated animate__fadeInUp form-square'>
-              <p onClick={handleClick} className='distance-list' style={{ color: 'white' }}>{buttonText}</p>
-              <div className='distance'>
-                <button
-                  className='btn my-btn2'
-                  type="submit"
-                  style={{ fontSize: '15px', fontWeight: '600' }} onClick={() => {
-                    console.log('modal closed'); close(); handleAdd();
-                  }}>
-                  Salva
-                </button>
-              </div>
+              <form>
+      <label>
+        <input
+           ref={inputRef}
+           type="text"
+           id="name"
+           name="name"
+        />
+      </label>
+      <div className='distance'>
+            <button
+            className='btn my-btn2'
+            type="submit"
+            style={{ fontSize: '15px', fontWeight: '600' }}
+            onClick={handleClick}
+            
+
+            >
+                
+            Salva
+            </button>
+      </div>
+      
+    </form>
+              
+              
             </div>
           )}
         </Popup>
